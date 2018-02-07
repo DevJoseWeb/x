@@ -1,0 +1,8 @@
+<div>
+  <h3>{{ agenda.status }}</h3>
+  <span class="button is-small is-info" (click)='ativarStatus(agenda.status)'>
+    Status <i class="fa fa-heart"></i>
+  </span>
+  <span class="button is-small is-danger" (click)='deleteAgenda(agenda?.id)'>Desativar</span>
+  <p>teste {{ agenda.status }} times.</p>
+</div>

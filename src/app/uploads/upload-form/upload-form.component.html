@@ -1,0 +1,31 @@
+<div *ngIf="currentUpload">
+  <progress class="progress is-success" min=1 max=100 value="{{ currentUpload?.progress }}"></progress>
+  Progresso: {{currentUpload?.name}} | {{currentUpload?.progress}}% Completo
+</div>
+
+
+<div class="box">
+  <h3>Enviar Uma Música MP3 Somente por Vez</h3>
+
+  <label>
+    <input type="file" class="button" (change)="detectFiles($event)">
+  </label>
+  <button class="button is-primary"
+    [disabled]="!selectedFiles"
+    (click)="uploadSingle()">
+    Enviar para o Servidor
+  </button>
+
+  <hr>
+
+  <h3>Enviar Varias Músicas MP3 por Vez</h3>
+
+  <label>
+    <input type="file" class="button" (change)="detectFiles($event)" multiple>
+  </label>
+  <button class="button is-primary"
+    [disabled]="!selectedFiles"
+    (click)="uploadMulti()">
+    Enviar para o Servidor
+  </button>
+</div>

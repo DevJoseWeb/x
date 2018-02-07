@@ -1,0 +1,36 @@
+<!--<pessoa-form></pessoa-form>-->
+
+<input [(ngModel)]="nome" placeholder="Digite o Nome" class="input">
+<input [(ngModel)]="cpf" placeholder="Digite o CPF" class="input">
+<input [(ngModel)]="email" placeholder="Digite o E-mail" class="input">
+<input [(ngModel)]="endereco" placeholder="Digite o Endereço" class="input">
+<input [(ngModel)]="n" placeholder="Digite o N" class="input">
+<input [(ngModel)]="cep" placeholder="Digite o CEP" class="input">
+<input [(ngModel)]="bairro" placeholder="Digite o Bairro" class="input">
+<input [(ngModel)]="cidade" placeholder="Digite o Cidade" class="input">
+
+<button class="button is-success" (click)="createPessoa()">
+ Salvar
+</button>
+<button class="button is-success" (click)="litarTodos()">
+  Listagem
+</button>
+
+<loading-spinner *ngIf="showSpinner"></loading-spinner>
+
+<table class="table table-hover">
+  <thead>
+  </thead>
+  <tbody>
+       <tr>
+        O Ultimo Registro Cadastrado:
+        <div *ngFor="let pessoa of pessoas | async">
+            <th>{{ pessoa.nome }}</th>
+            <th>{{ pessoa.email }}</th>
+            <th>{{ pessoa.cpf }}</th>
+            <th>{{ pessoa.endereco }}</th>
+          </div>
+    </tr>
+  </tbody>
+</table>
+

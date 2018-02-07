@@ -1,0 +1,13 @@
+<upload-form></upload-form>
+
+<h3>Lista de músicas enviadas por este usuário :</h3>
+
+<div *ngFor="let upload of uploads | async">
+  <upload-detail [upload]='upload'></upload-detail>
+</div>
+
+<loading-spinner *ngIf="showSpinner"></loading-spinner>
+
+<hr>
+
+
