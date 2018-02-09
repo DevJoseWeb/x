@@ -7,6 +7,7 @@ import { SharedModule } from '../../shared/shared.module';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { UploadService } from './upload.service';
+//import { PhotosService } from './photos.service';
 
 import { UploadFormComponent } from '../upload-form/upload-form.component';
 import { UploadsListComponent } from '../uploads-list/uploads-list.component';

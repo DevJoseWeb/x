@@ -1,2 +1,23 @@
+<video width="150" height="100" controls>
+  <source src="{{upload.url}}" preload="auto" type="video/mp4">
+    <p>Seu navegador não suporta o elemento video </p>
+</video>
+
 <strong>{{upload.name}}</strong>
-<button (click)='deleteUpload()' class="button is-danger is-small">Apagar Música</button><br>
+<strong>{{upload.file}}</strong>
+<strong>{{upload.createdAt}}</strong>
+<!--
+<audio src="{{upload.url}}" preload="auto" controls>
+  <p>Seu navegador não suporta o elemento audio </p>
+</audio>-->
+<div>
+  <button onclick="document.getElementById('demo').play()">Reproduzir o áudio</button>
+  <button onclick="document.getElementById('demo').pause()">Pausar o áudio</button>
+  <button onclick="document.getElementById('demo').volume+=0.1">Aumentar o volume</button>
+  <button onclick="document.getElementById('demo').volume-=0.1">Diminuir o volume</button>
+</div>
+<button
+
+
+(click)='deleteUpload()' class="button is-danger is-small">Apagar Música</button><br>
+

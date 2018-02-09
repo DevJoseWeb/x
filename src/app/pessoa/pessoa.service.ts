@@ -16,7 +16,7 @@ export class PessoaService {
     this.pessoasCollection = this.afs.collection('pessoas', (ref) => ref.orderBy('datacadastro', 'desc').limit(1));
     this.pessoasCollection2 = this.afs2.collection('pessoas', (ref) => ref.orderBy('datacadastro', 'desc').limit(10));
   }
- 
+
   getData(): Observable<Pessoa[]> {
     return this.pessoasCollection.valueChanges();
   }
@@ -54,7 +54,7 @@ export class PessoaService {
             });
           }
 
-          
+
     getPessoaTodos() {
         return this.afs2.doc<Pessoa>(`pessoas/`);
     }
@@ -79,7 +79,7 @@ export class PessoaService {
       endereco: string, cep: string, n: string, bairro: string, cidade: string) {
       const pessoa = {
         nome, cpf, email, endereco, cep, n, bairro, cidade,
-        datacadastro: new Date().getTime(),
+        datacadastro: new Date().getTime()
       };
       return this.pessoasCollection.add(pessoa);
     }

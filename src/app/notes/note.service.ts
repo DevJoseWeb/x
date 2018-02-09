@@ -1,11 +1,9 @@
 import { Injectable } from '@angular/core';
-
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
-
-import { Note } from './note-model';
-
 import { Observable } from 'rxjs/Observable';
 import { map } from 'rxjs/operators';
+
+import { Note } from './note-model';
 
 interface NewNote {
   content: string;
@@ -50,7 +48,7 @@ export class NoteService {
     return this.notesCollection.add(note);
   }
 
-  updateNote(id: string, data: Partial<Note>) {
+  updateNote(id: string, time: number, data: Partial<Note>) {
     return this.getNote(id).update(data);
   }
 

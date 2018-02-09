@@ -1,0 +1,22 @@
+<!--<input [(ngModel)]="text" placeholder="Digite o Texto" class="input">
+<input [(ngModel)]="face" placeholder="Digite o Face" class="input">-->
+<button class="button is-success" (click)="createPhoto()">
+  Salvar
+ </button>
+
+<loading-spinner *ngIf="showSpinner"></loading-spinner>
+
+<table class="table table-hover">
+  <thead>
+  </thead>
+  <tbody>
+       <tr>
+        O Ultimo Registro Cadastrado:
+        <div *ngFor="let photos of photoss | async">
+            <th>{{ photos.text }}</th>
+            <th>{{ photos.face }}</th>
+          </div>
+    </tr>
+  </tbody>
+</table>
+

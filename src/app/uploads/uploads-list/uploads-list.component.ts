@@ -13,6 +13,7 @@ import { Observable } from 'rxjs/Observable';
 export class UploadsListComponent implements OnInit {
 
   uploads: Observable<Upload[]>;
+  
   showSpinner = true;
 
   constructor(private upSvc: UploadService) { }

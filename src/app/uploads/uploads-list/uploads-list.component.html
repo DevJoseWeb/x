@@ -9,5 +9,18 @@
 <loading-spinner *ngIf="showSpinner"></loading-spinner>
 
 <hr>
-
+<div *ngIf="result$ | async as result">
+  <h3>Extracted Text</h3>
+  <p>{{ result.text }}</p>
+  <h3>Facial Detection</h3>
+  <ul>
+    <li>Happy? {{ result.faces[0]?.joyLikelihood }} </li>
+    <li>Angry? {{ result.faces[0]?.angerLikelihood }} </li>
+    <li>Sad? {{ result.faces[0]?.sorrowLikelihood }} </li>
+  </ul>
+  <h3>Matching Images on the Web</h3>
+  <div *ngFor="let img of result.web.partialMatchingImages">
+    <img [src]="img.url">
+  </div>
+</div>
 

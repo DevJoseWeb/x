@@ -20,6 +20,7 @@ import { UiModule } from './ui/shared/ui.module';
 import { NotesModule } from './notes/notes.module';
 import { PessoaModule } from './pessoa/pessoa.module';
 import { AgendaModule } from './agenda/agenda.module';
+import { PhotosModule } from './photos/shared/photos.module';
 ///// End FireStarter
 
 import { environment } from '../environments/environment';
@@ -27,10 +28,14 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from 'angularfire2';
 export const firebaseConfig = environment.firebaseConfig;
 import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { LayoutComponent } from './layout/layout.component';
+//import { PhotosListComponent } from './photos-list/photos-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    LayoutComponent,
+    //PhotosListComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,6 +48,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
     NotesModule,
     PessoaModule,
     AgendaModule,
+    PhotosModule,
     AngularFireModule.initializeApp(firebaseConfig),
   ],
   bootstrap: [

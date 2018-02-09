@@ -28,10 +28,12 @@
                <th>{{ agenda.prioridade }}</th>
                 <th>{{ agenda.repeticoes }}</th>
                  <th>{{ agenda.acada }}</th>
-                  <th>{{ agenda.ate }}</th>
-             <th>{{ agenda.datacadastro }} +  <span class="button is-small is-danger card-footer-item" (click)='deleteAgenda(agenda?.id)'>Apagar</span></th>
+                  <th>{{ agenda.ate }}</th><!-- fullDate -->
+             <th>{{ agenda.datacadastro | date: 'short'}} +
+             <span class="button is-small is-danger card-footer-item" (click)='deleteAgenda(agenda?.id)'>Apagar</span></th>
            </div>
            </tr>
   </tbody>
 </table>
 
+DEMONSTRAR COMO FIREBASE É REAL TIME..
