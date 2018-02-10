@@ -34,7 +34,8 @@ export class PessoaService {
             nome: data.nome, cpf: data.cpf,
             email: data.email, endereco: data.endereco,
             n: data.n, cep: data.cep, bairro: data.bairro,
-            cidade: data.cidade, datacadastro: data.datacadastro};
+            cidade: data.cidade, datacadastro: data.datacadastro
+            };
           });
         });
       }

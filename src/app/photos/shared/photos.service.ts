@@ -41,6 +41,10 @@ export class PhotosService {
         });
       }
 
+  getPhotos(id: string) {
+        return this.afs.doc<Photos>(`photoss/${id}`);
+    }
+
   create(faces: string, text: string, landmarks: string, web: string) {
       const photos = {
         faces, text, landmarks, web

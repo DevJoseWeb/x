@@ -11,7 +11,7 @@ import { Photos } from '../shared/photos';
 })
 export class PhotosListComponent implements OnInit {
 
-photos: Observable<Photos[]>;
+photoss: Observable<Photos[]>;
 text: string;
 faces: string;
 landmarks: string;
@@ -21,8 +21,8 @@ showSpinner = true;
     constructor(private photosService: PhotosService) { }
 
   ngOnInit() {
-     this.photos = this.photosService.getSnapshot();
-     this.photos.subscribe(() => this.showSpinner = false);
+     this.photoss = this.photosService.getSnapshot();
+     this.photoss.subscribe(() => this.showSpinner = false);
   }
 
 }

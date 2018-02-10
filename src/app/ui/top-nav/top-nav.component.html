@@ -1,10 +1,4 @@
 <nav class="nav">
-    <div class="nav-left">
-      <a class="nav-item logo" routerLink="/">
-        <img src="assets/images/angularfirebase.png" width="30px"
-        alt="Sistema Ximbo"/> Sisema Ximbo
-      </a>
-    </div>
 
     <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
     <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
@@ -14,34 +8,33 @@
       <span></span>
     </span>
 
-    <!-- This "nav-menu" is hidden on mobile -->
-    <!-- Add the modifier "is-active" to display it on mobile -->
-    <div class="nav-right nav-menu" [ngClass]="{'is-active': show}">
-      <a class="nav-item" routerLink="/login">
-        Login
-      </a>
-       <a class="nav-item" routerLink="/uploads">
-        MP3
-      </a>
-      <a class="nav-item" routerLink="/photos">
-        Livros
-      </a>
-
-      <a class="nav-item" routerLink="/pessoas">
-        Pessoas
-      </a>
-
-
-<!--
-    <a class="nav-item" routerLink="/items">
-        Itens
-        </a> -->
-        <a class="nav-item" routerLink="/notes">
-        Anotações
-      </a>
-
+  <ul class="nav nav-tabs" [ngClass]="{'is-active': show}">
+  <div>
+  <img src="assets/images/angularfirebase.png"  width="130"        alt="google"/>
+  </div>
+  <li class="nav-item">
+    <a class="nav-link active" routerLink="/photos">Livros</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" routerLink="/uploads">MP3</a>
+  </li>
+   <li class="nav-item">
+    <a class="nav-link active" routerLink="/notes">Anotações</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" routerLink="/pessoas">Pessoas</a>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" 
+    role="button" aria-haspopup="true" aria-expanded="false">Usuário</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" routerLink="/login" >Login</a>
+      <a class="dropdown-item" href="#">Sair</a>
+      <a class="dropdown-item" href="#">Editar</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Surpresa</a>
     </div>
-  </nav>
-
-
+  </li>
+</ul>
+</nav>
 
